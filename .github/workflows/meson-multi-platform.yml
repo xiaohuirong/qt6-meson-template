@@ -76,7 +76,7 @@ jobs:
       if: runner.os == 'Linux'
       run: |
         sudo apt update
-        sudo apt install meson ninja pkgconf
+        sudo apt install meson ninja-build pkgconf
         sudo apt install -y qt6-base-dev qt6-base-dev-tools qt6-tools-dev qt6-tools-dev-tools
 
     - name: Prepare Build
