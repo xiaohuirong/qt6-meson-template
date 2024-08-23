@@ -76,6 +76,7 @@ jobs:
       uses: jurplel/install-qt-action@v4
       with:
         version: '6.7.2'
+        tools: 'tools_qtcreator,qt.tools.qtcreator'
 
     - name: Prepare Build
       run: meson setup build
