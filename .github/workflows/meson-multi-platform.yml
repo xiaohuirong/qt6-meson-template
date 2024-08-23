@@ -64,7 +64,12 @@ jobs:
     - name: Run Test Suite
       run: meson test -v -C build
 
+    - uses: vimtor/action-zip@v1.2
+      with:
+        files: build/
+        dest: build_${{ matrix.os }}-${{ matrix.cpp_compiler }}.zip
+
     - name: Attest
       uses: actions/attest-build-provenance@v1
       with:
-        subject-path: '${{ github.workspace }}/build'
+        subject-path: '${{ github.workspace }}/build_${{ matrix.os }}-${{ matrix.cpp_compiler }}.zip'
