@@ -1,4 +1,5 @@
 #include "mainwindow.h"
+#include "qpushbutton.h"
 #include "ui_mainwindow.h"
 
 MainWindow::MainWindow(QWidget *parent)
@@ -6,9 +7,15 @@ MainWindow::MainWindow(QWidget *parent)
     , ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
+    connect(ui->clickButton, &QPushButton::click, this, &MainWindow::handleClick);
 }
 
 MainWindow::~MainWindow()
 {
     delete ui;
+}
+
+void MainWindow::handleClick()
+{
+    ui->logOutput->append("Hello world!");
 }
