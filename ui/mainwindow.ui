@@ -51,25 +51,5 @@
   <widget class="QStatusBar" name="statusbar"/>
  </widget>
  <resources/>
- <connections>
-  <connection>
-   <sender>clickButton</sender>
-   <signal>clicked()</signal>
-   <receiver>MainWindow</receiver>
-   <slot>handleClick()</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>88</x>
-     <y>75</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>399</x>
-     <y>299</y>
-    </hint>
-   </hints>
-  </connection>
- </connections>
- <slots>
-  <slot>handleClick()</slot>
- </slots>
+ <connections/>
 </ui>
