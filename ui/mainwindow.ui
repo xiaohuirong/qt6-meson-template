@@ -52,7 +52,4 @@
  </widget>
  <resources/>
  <connections/>
- <slots>
-  <slot>handleClick()</slot>
- </slots>
 </ui>
