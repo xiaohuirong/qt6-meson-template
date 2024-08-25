@@ -17,4 +17,5 @@ executable('qt6-test',
   sources: ['src/main.cpp', 'src/mainwindow.cpp'] + qt_modules,
   dependencies: [qt6_dep, qt6_widgets_dep],
   include_directories: inc_dir,
-  install: true)
+  install: true,
+  cpp_args: ['-fPIC'])
