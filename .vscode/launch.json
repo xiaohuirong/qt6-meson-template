@@ -1,0 +1,35 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "MyDebug",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${workspaceFolder}/build/qt6-test",
+            "args": [],
+            "cwd": "${workspaceFolder}",
+            "environment": [
+                {
+                    "name": "XDG_RUNTIME_DIR",
+                    "value": "/run/user/1000"
+                },
+                {
+                    "name": "WAYLAND_DISPLAY",
+                    "value": "wayland-1"
+                },
+                {
+                    "name": "QT_WAYLAND_DISABLE_WINDOWDECORATION",
+                    "value": "1"
+                },
+                {
+                    "name": "QT_QPA_PLATFORMTHEME",
+                    "value": "qt6ct"
+                },
+                {
+                    "name": "QT_QPA_PLATFORM",
+                    "value": "wayland;xcb"
+                },
+            ],
+        }
+    ]
+}
