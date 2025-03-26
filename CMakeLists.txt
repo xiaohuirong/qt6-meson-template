@@ -7,8 +7,6 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
 find_package(Qt6 REQUIRED COMPONENTS Widgets)
 
-include_directories(inc ${CMAKE_BINARY_DIR})
-
 set(SOURCES
     src/main.cpp
     src/mainwindow.cpp
@@ -31,7 +29,7 @@ qt6_wrap_ui(UI_HEADERS ${UI_FILES})
 qt6_wrap_cpp(MOC_SOURCES ${MOC_HEADERS})
 
 add_executable(${PROJECT_NAME} ${SOURCES} ${HEADERS} ${UI_HEADERS} ${MOC_SOURCES})
-
+target_include_directories(${PROJECT_NAME} PRIVATE inc ${CMAKE_BINARY_DIR})
 target_link_libraries(${PROJECT_NAME} PRIVATE Qt6::Widgets)
 
 set_target_properties(${PROJECT_NAME} PROPERTIES
